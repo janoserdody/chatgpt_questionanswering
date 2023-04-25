@@ -1,0 +1,48 @@
+KH Bank Chatbot
+
+technológia: Blazor Server !!!!!!!!!!!!!!!
+
+ötlet:
+később tovább tanítani reinforcement learning RLHF
+
+gradio .NET
+
+kérdések: Miért embedding és nem finetuning?
+
+chatbot:
+kérdésekre tud válaszolni
+
+2. kérdéseket és válaszokat is meg lehet adni
+
+trainmy.ai
+
+technológia: Blazor Server !!!!!!!!!!!!!!!
+
+
+How to Build Your Own AI Chatbot With ChatGPT API: A Step-by-Step Tutorial
+https://beebom.com/how-build-own-ai-chatbot-with-chatgpt-api/
+
+How to Train an AI Chatbot With Custom Knowledge Base Using ChatGPT API
+https://beebom.com/how-train-ai-chatbot-custom-knowledge-base-chatgpt-api/
+
+https://trainmy.ai/
+
+ChatGPT examples : https://platform.openai.com/examples
+
+Dokumentáció a ChatGPT-hez:
+
+https://platform.openai.com/docs/introduction/overview
+
+
+PDF-ből vagy könyvből JSONL generálása a ChatGPT finomhangolásához:
+
+https://community.openai.com/t/how-do-i-upload-a-book-to-gpt3/1499
+
+
+How do I "upload" a book to GPT3?
+
+Hey guys,  I’d like to upload a book and ask questions about that specific book.  Would I have to put all the contents of the book into one/multiple JSONL files (if yes, is there a general structur...
+
+https://forum.bubble.io/t/gpt-3-fine-tuning-how-to-generate-jsonl-training-file-without-code/247398
+
+https://github.com/RageAgainstThePixel/OpenAI-DotNet

@@ -1,0 +1,83 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAI.Net", "OpenAI.Net\OpenAI.Net.csproj", "{30D27AD9-3BAC-4AFF-B5D9-408AD4D125CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAI.Net.Tests", "OpenAI.Net.Tests\OpenAI.Net.Tests.csproj", "{35D5C48B-BBB6-4D5E-A1CC-995A7D009874}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAI.Net.Integration.Tests", "OpenAI.Net.Integration.Tests\OpenAI.Net.Integration.Tests.csproj", "{23E89434-E799-4FD7-BE55-DF1E88422D89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "..\examples\Console\ConsoleApp\ConsoleApp.csproj", "{3D666581-F392-41E0-B6A7-D623FFA0D857}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "..\examples\WebApp\WebApplication\WebApplication.csproj", "{68EA0231-02C5-4E73-92A7-E80309F54DF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{76AB2D50-53EE-424E-A066-9109D940D181}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{62AD684A-9FEC-401A-850F-93E460A9220A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "..\examples\Blazor\BlazorApp\BlazorApp.csproj", "{03D6F4D5-71C8-4079-9766-9113B69285F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppWithPolly", "..\examples\Console\ConsoleAppWithPolly\ConsoleAppWithPolly.csproj", "{BCBB5FEC-8D08-48B6-B628-5AB8B93960CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeGenerator", "..\tools\CodeGenerator\CodeGenerator.csproj", "{3B8C6A07-E57B-400C-A594-06087706C210}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{971AFD4E-95A0-4C8A-8F7B-9EF06BBC2EB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAI.Net.Acceptance.Tests", "OpenAI.Net.Acceptance.Tests\OpenAI.Net.Acceptance.Tests.csproj", "{48C7B7D6-4575-4519-97F7-20FB56171AE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30D27AD9-3BAC-4AFF-B5D9-408AD4D125CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D27AD9-3BAC-4AFF-B5D9-408AD4D125CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D27AD9-3BAC-4AFF-B5D9-408AD4D125CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D27AD9-3BAC-4AFF-B5D9-408AD4D125CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D5C48B-BBB6-4D5E-A1CC-995A7D009874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D5C48B-BBB6-4D5E-A1CC-995A7D009874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D5C48B-BBB6-4D5E-A1CC-995A7D009874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D5C48B-BBB6-4D5E-A1CC-995A7D009874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E89434-E799-4FD7-BE55-DF1E88422D89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E89434-E799-4FD7-BE55-DF1E88422D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E89434-E799-4FD7-BE55-DF1E88422D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D666581-F392-41E0-B6A7-D623FFA0D857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D666581-F392-41E0-B6A7-D623FFA0D857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D666581-F392-41E0-B6A7-D623FFA0D857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EA0231-02C5-4E73-92A7-E80309F54DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EA0231-02C5-4E73-92A7-E80309F54DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EA0231-02C5-4E73-92A7-E80309F54DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03D6F4D5-71C8-4079-9766-9113B69285F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03D6F4D5-71C8-4079-9766-9113B69285F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03D6F4D5-71C8-4079-9766-9113B69285F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCBB5FEC-8D08-48B6-B628-5AB8B93960CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCBB5FEC-8D08-48B6-B628-5AB8B93960CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCBB5FEC-8D08-48B6-B628-5AB8B93960CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B8C6A07-E57B-400C-A594-06087706C210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B8C6A07-E57B-400C-A594-06087706C210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B8C6A07-E57B-400C-A594-06087706C210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C7B7D6-4575-4519-97F7-20FB56171AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C7B7D6-4575-4519-97F7-20FB56171AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C7B7D6-4575-4519-97F7-20FB56171AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C7B7D6-4575-4519-97F7-20FB56171AE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35D5C48B-BBB6-4D5E-A1CC-995A7D009874} = {62AD684A-9FEC-401A-850F-93E460A9220A}
+		{23E89434-E799-4FD7-BE55-DF1E88422D89} = {62AD684A-9FEC-401A-850F-93E460A9220A}
+		{3D666581-F392-41E0-B6A7-D623FFA0D857} = {76AB2D50-53EE-424E-A066-9109D940D181}
+		{68EA0231-02C5-4E73-92A7-E80309F54DF7} = {76AB2D50-53EE-424E-A066-9109D940D181}
+		{03D6F4D5-71C8-4079-9766-9113B69285F2} = {76AB2D50-53EE-424E-A066-9109D940D181}
+		{BCBB5FEC-8D08-48B6-B628-5AB8B93960CB} = {76AB2D50-53EE-424E-A066-9109D940D181}
+		{3B8C6A07-E57B-400C-A594-06087706C210} = {971AFD4E-95A0-4C8A-8F7B-9EF06BBC2EB9}
+		{48C7B7D6-4575-4519-97F7-20FB56171AE4} = {62AD684A-9FEC-401A-850F-93E460A9220A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC2BD365-8E89-496D-9021-E3F00C1D0DE2}
+	EndGlobalSection
+EndGlobal

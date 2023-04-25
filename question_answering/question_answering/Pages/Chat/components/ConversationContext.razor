@@ -1,0 +1,28 @@
+﻿@using question_answering.Data;
+<div class="converation-context">
+
+    <EditForm Model="@SearchModel" class="converation-context-form" OnValidSubmit="@OnGenerateTextCompletionSubmitted">
+        <h5>System</h5>
+        <InputTextArea title="system" @bind-Value="@SearchModel.System" class="system-area" />
+
+        <h5>Assistant</h5>
+        <InputTextArea title="assistant" @bind-Value="@SearchModel.Assistant" class="assistant-area" />
+        <button title="send" type="submit" class="chat-input-button" disabled="@IsBusy"> Generate Questions</button>
+        <button title="send" type="button" @onclick="OnContinue" class="chat-input-button" disabled="@IsBusy"> Please Continue</button>
+
+    </EditForm>
+</div>
+
+
+@code {
+    [Parameter]
+    public SearchModel SearchModel { get; set; }
+
+    [Parameter]
+    public bool IsBusy { get; set; }
+
+    [Parameter]
+    public EventCallback OnGenerateTextCompletionSubmitted { get; set; }
+    [Parameter]
+    public EventCallback OnContinue { get; set; }
+}

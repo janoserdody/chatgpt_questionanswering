@@ -1,0 +1,99 @@
+﻿@page "/generate"
+
+<PageTitle>Generate</PageTitle>
+
+
+@using question_answering.Data
+@using OpenAI.Net
+@inject IOpenAIService OpenAIService
+
+<div class="content px-4">
+    <h1>Generate questions and answers</h1>
+    <p>Stream callbacks : @loopCount</p>
+
+    <EditForm Model="@searchModel" OnValidSubmit="@SearchText">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Prompt</label>
+            <InputText id="name" @bind-Value="searchModel.Prompt" class="form-control" />
+            <div id="emailHelp" class="form-text">Text to send to OpenAI Text Completion endpoint</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Search Text</label>
+            <InputText id="name" @bind-Value="searchModel.SearchText" class="form-control" />
+            <div id="emailHelp" class="form-text">Text to send to OpenAI Text Completion endpoint</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Max Tokens</label>
+            <InputNumber id="maxTokens" @bind-Value="searchModel.MaxTokens" class="form-control" />
+            <div id="emailHelp" class="form-text">Max tokens to consume, relates to how long the completion will be, N.B this includes your prompt</div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Search</button>
+    </EditForm>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Results</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var result in results)
+            {
+                <tr>
+                    <td>@result</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+@code {
+    private int MaxTokens = 2048;
+    private SearchModel searchModel = new()
+        {
+            MaxTokens = 2000,
+            NoOfResults = 1,
+            Prompt = "Kérlek írj 50 kérdést és mindegyik kérdéshez egy választ az alábbi szövegről: ",
+            SearchText = ""
+        };
+    private int loopCount = 0;
+    private string[] results = new string[0];
+
+    private async Task SearchText()
+    {
+        results = new string[searchModel.NoOfResults];
+        searchModel.MaxTokens = CheckMaxTokens(searchModel.MaxTokens);
+
+    string prompt = searchModel.Prompt + " " + searchModel.SearchText;
+
+        await foreach (var result in OpenAIService.TextCompletion.GetStream(prompt, o =>
+        {
+            o.N = searchModel.NoOfResults;
+            o.MaxTokens = searchModel.MaxTokens;
+        }))
+        {
+            var index = result.Result!.Choices[0].Index;
+            results[index] += result.Result.Choices[0].Text;
+
+            loopCount++;
+            StateHasChanged();
+        }
+    }
+
+    private int CheckMaxTokens(int num_tokens)
+    {
+        if (num_tokens > MaxTokens)
+        {
+            return MaxTokens;
+        }
+        return num_tokens;
+    }
+
+}

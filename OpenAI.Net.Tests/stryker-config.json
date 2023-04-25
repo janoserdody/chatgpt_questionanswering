@@ -1,0 +1,11 @@
+{
+  "stryker-config": {
+    "project": "OpenAI.Net.csproj",
+    "thresholds": {
+      "high": 100,
+      "low": 100,
+      "break": 100
+    },
+    "project-info": { "name": "github.com/jodendaal/OpenAI.Net" }
+  }
+}
